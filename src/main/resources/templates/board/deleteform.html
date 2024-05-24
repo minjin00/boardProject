@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Board</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-control-sm {
+      height: 30px;
+    }
+    .small-container {
+      width: 50%;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+<div class="small-container">
+  <h2 class="text-center mb-4">Delete Board</h2>
+  <form th:action="@{/deleteform/{id}(id=${id})}" method="post">
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" class="form-control form-control-sm" required>
+    </div>
+    <input type="hidden" name="id" th:value="${id}">
+    <div class="text-center">
+      <input type="submit" value="Delete" class="btn btn-danger">
+    </div>
+  </form>
+  <div th:if="${errorMessage}" class="alert alert-danger" role="alert">
+    <span th:text="${errorMessage}"></span>
+  </div>
+</div>
+</body>
+</html>

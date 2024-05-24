@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Example</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    .form-control-sm {
+      height: 30px;
+    }
+    #content {
+      height: 200px;
+    }
+    .container {
+      width: 80%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    body {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2 class="text-center mb-4">Create a New Board</h2>
+  <form th:action="@{/writeform}" method="post" th:object="${board}">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" th:field="*{name}" class="form-control form-control-sm" required>
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" id="title" th:field="*{title}" class="form-control form-control-sm" required>
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+      <textarea id="content" th:field="*{content}" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" th:field="*{password}" class="form-control form-control-sm" required>
+    </div>
+    <div class="text-center">
+      <input type="submit" value="Create" class="btn btn-primary">
+    </div>
+  </form>
+</div>
+</body>
+</html>
