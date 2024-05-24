@@ -1,9 +1,16 @@
 /* board.css */
 
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: "Dokdo", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    /*font-family: Arial, sans-serif;*/
     padding: 20px;
+}
+
+.body {
+    background-color: #f8f9fa;
 }
 
 h1 {
@@ -27,7 +34,12 @@ th, td {
     text-align: left;
 }
 
+tr td {
+    background-color: #ffffff;
+}
+
 th {
+    background-color: #ffffff;
     color: white;
 }
 
@@ -62,4 +74,16 @@ ul li a {
 
 ul li a:hover {
     background-color: #0056b3;
+}
+
+tr td a {
+    color: black;
+}
+
+tr td a:visited {
+    color: black; /* 기본 링크 색상과 동일하게 설정 */
+}
+
+tr td a:hover {
+    color: #007bff;
 }

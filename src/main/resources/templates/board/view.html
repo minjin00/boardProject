@@ -68,9 +68,9 @@
     <p><strong class="card-text">Created At:</strong> <span th:text="${#temporals.format(board.createdAt, 'yyyy/MM/dd HH:mm')}">날짜</span></p>
 
     <!-- 링크를 부트스트랩 버튼으로 변경 및 스타일 추가 -->
-    <a class="btn card-link" th:href="@{/list}">List</a>
-    <a class="btn card-link" th:href="@{/updateform/{id}(id=${board.id})}">Edit</a>
-    <a class="btn card-link" th:href="@{/deleteform/{id}(id=${board.id})}">Delete</a>
+    <a class="btn card-link" th:href="@{/list}">목록</a>
+    <a class="btn card-link" th:href="@{/updateform/{id}(id=${board.id})}">수정</a>
+    <a class="btn card-link" th:href="@{/deleteform/{id}(id=${board.id})}">삭제</a>
   </div>
 </div>
 </body>
